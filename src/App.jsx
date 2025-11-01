@@ -1,16 +1,21 @@
 import React from 'react'
-import Header from './components/Header'
-import Career from './components/Career'
-import Audience from './components/Audience'
-import Industry from './components/Industry'
+import Hero from './components/Hero'
+import AboutUs from './components/AboutUs'
+import OurServices from './components/OurServices'
+import Prices from './components/Prices'
+import CallToAction from './components/CallToAction'
+import Footer from './components/Footer'
+
 
 const App = () => {
   return (
     <>
-    <Header />
-    <Career />
-    <Audience />
-    <Industry />
+    <Hero />
+    <AboutUs />
+    <OurServices />
+    <Prices />
+    <CallToAction />
+    <Footer />
     </>
   )
 }

@@ -11,3 +11,7 @@
 .text-size{
     font-size: 15px;
 }
+
+.gap-x-26{
+    column-gap: calc(var(--spacing) * 26)
+}
