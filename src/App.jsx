@@ -11,12 +11,15 @@ const App = () => {
   return (
     <>
     <Hero />
+    <div>
     <AboutUs />
     <OurServices />
     <Prices />
     <CallToAction />
+    </div>
     <Footer />
     </>
+
   )
 }
 
