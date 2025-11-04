@@ -13,7 +13,7 @@ const OurServices = () => {
 
             <div className="grid grid-cols-1 gap-8 w-full mx-auto my-16
                             sm:grid-cols-2
-                            md:grid-cols-1
+                            md:grid-cols-2
                             lg:grid-cols-3
                             xl:grid-cols-3
                             ">
@@ -21,7 +21,7 @@ const OurServices = () => {
                         <p className="text-gray-500 text-lg mb-8">—— 01</p>
                         <img src="./src/assets/sisterlocs.png" alt="SisterLocs" className="w-[90%] h-45 object-cover mb-4 rounded-2xl
                                                                                             sm:w-[90%] sm:h-45
-                                                                                            md:w-[40%] md:h-60
+                                                                                            md:w-[100%] md:h-60
                                                                                             lg:w-[90%] lg:h-45
                                                                                             xl:w-[80%] xl:h-50
 
@@ -37,7 +37,7 @@ const OurServices = () => {
                         <p className="text-gray-500 text-lg mb-8">—— 02</p>
                         <img src="./src/assets/microlocs.png" alt="microlocs"  className="w-[90%] h-45 object-cover mb-4 rounded-2xl
                                                                                             sm:w-[90%] sm:h-45
-                                                                                            md:w-[40%] md:h-60
+                                                                                            md:w-[100%] md:h-60
                                                                                             lg:w-[90%] lg:h-45
                                                                                             xl:w-[80%] xl:h-50
                         " />
@@ -51,7 +51,7 @@ const OurServices = () => {
                         <p className="text-gray-500 text-lg mb-8">—— 02</p>
                         <img src="./src/assets/interlocs.png" alt="interlocs"  className="w-[90%] h-45 object-cover mb-4 rounded-2xl
                                                                                             sm:w-[90%] sm:h-45
-                                                                                            md:w-[40%] md:h-60
+                                                                                            md:w-[100%] md:h-60
                                                                                             lg:w-[90%] lg:h-45
                                                                                             xl:w-[80%] xl:h-50
                         " />
