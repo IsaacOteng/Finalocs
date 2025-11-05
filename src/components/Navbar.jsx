@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { TextAlignJustify } from "lucide-react";
+import { TextAlignJustify,X } from "lucide-react";
+import Sidebar from "./Sidebar";
 
 
 const Navbar = ({
@@ -13,6 +14,8 @@ const Navbar = ({
 
 }) => {
     const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+
 
     useEffect(() => {
         const onScroll = () => {
@@ -35,7 +38,7 @@ const Navbar = ({
     return (
         <>
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-1000 ease-out ${scrolled ? `${scrolledBg} ${scrolledShadow}` : initialBg}`}
+            className={`fixed top-0 left-0 w-full z-40 transition-all duration-1000 ease-out ${scrolled ? `${scrolledBg} ${scrolledShadow}` : initialBg}`}
             style={{
                 transform: scrolled ? "translateY(0)" : "translateY(-100%)",
                 opacity: scrolled ? 1 : 0,
@@ -90,19 +93,33 @@ const Navbar = ({
                     </button>
 
                     {/* Mobile Menu Icon */}
-                    <div className="block 
-                                    sm:block 
-                                    md:block 
-                                    lg:block 
-                                    xl:hidden">
+                    <div onClick={() => setMenuOpen(true)}
+                            className="block focus:outline-none
+                                        sm:block 
+                                        md:block 
+                                        lg:block 
+                                        xl:hidden
+                                        ">
                         <TextAlignJustify color={iconColor} size={25} />
                     </div>
-                </div>
-            </div>
+
+        </div>
+        </div>
         </nav>
 
-
+{/* Sidebar For Phones using the three lines */}
+            {/* Mobile Menu (Styled like Fina’s Locs) */}
         
+        {/* Dim overlay: covers main content while sidebar is open. Clicking it closes the sidebar. */}
+        <div
+            onClick={() => setMenuOpen(false)}
+            aria-hidden={!menuOpen}
+            className={`fixed inset-0 bg-gray-950/80 transition-opacity duration-300 ${menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'} z-40`}
+        />
+
+        <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
+
         <nav className=" bg-yellow-600 aria-hidden={false}">
             <div className="w-full flex items-center justify-between pr-5 py-4 
                             sm:px-0 
@@ -154,11 +171,12 @@ const Navbar = ({
                     </button>
 
                     {/* Mobile Menu Icon */}
-                    <div className="block 
-                                    sm:block 
-                                    md:block 
-                                    lg:block 
-                                    xl:hidden">
+                    <div  onClick={() => setMenuOpen(true)}
+                            className="block focus:outline-none
+                                        sm:block 
+                                        md:block 
+                                        lg:block 
+                                        xl:hidden">
                         <TextAlignJustify color={iconColor} size={25} />
                     </div>
                 </div>
