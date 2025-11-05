@@ -1,8 +1,14 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+import InViewAnimation from '../hooks/InViewAnimation';
 import { ArrowRight } from 'lucide-react';
+import ImagesAboutUs from './ImagesAboutUs';
 
 
 const AboutUs = () => {
+
+const [ref, isVisible] = InViewAnimation(1, true);
+
   return (
     <>
     <section className='m-4 mx-4 mt-5
@@ -20,25 +26,9 @@ const AboutUs = () => {
                           lg:items-start lg:w-[50%]
                           xl:items-start xl:w-[50%]
                           ">
-            <img
-              className="z-10 w-full 
-                        md:h-full md:w-[50%]
-                        lg:h-58 lg:w-58
-                        xl:h-70 xl:w-72
-                        "
-              src="./src/assets/man1.png"
-              alt=""
-            />
-            <img
-              className="z-20 w-1/2 -mt-10
-                        sm:w-1/2
-                        md:h-full md:w-[50%] md:-mt-50 md:ml-75
-                        lg:h-58 lg:w-58 lg:-mt-20 lg:ml-40
-                        xl:h-65 xl:w-65 xl:-mt-38 xl:ml-54
-                      "
-              src="./src/assets/hero_woman.png"
-              alt=""
-            />
+
+          <ImagesAboutUs />
+    
           </div>
           <div className='flex flex-col items-start
                           md:w-[100%] md:mt-10
