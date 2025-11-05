@@ -10,15 +10,15 @@ const InViewAnimation = (threshold = 1, triggerOnce = true) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
           if (triggerOnce) {
-            observer.disconnect(); // Stop observing if triggerOnce is true
+            observer.disconnect(); // masa stop observing if triggerOnce is true
           }
         } else {
-          setIsVisible(false); // Reset visibility on scroll out (for re-trigger on refresh or re-entry)
+          setIsVisible(false); // for re-trigger on refresh or re-entry
         }
       },
       {
         threshold,
-        rootMargin: '0px 0px -10% 0px', // Trigger when {threshold}% of the element is visible
+        rootMargin: '0px 0px -10% 0px', 
       }
     );
 

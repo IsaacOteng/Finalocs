@@ -3,12 +3,11 @@ import { motion } from "framer-motion";
 import InViewAnimation from "../hooks/InViewAnimation";
 
 const ImagesAboutUs = () => {
-    const [ref, isVisible] = InViewAnimation(1, true); // One ref to trigger both
+    const [ref, isVisible] = InViewAnimation(1, true); 
     const [loaded, setLoaded] = useState({ man: false, woman: false });
 
     return (
         <>
-        {/* FIRST IMAGE - left to right */}
         <div ref={ref} className="relative overflow-hidden w-full">
             <img
             src="./src/assets/man1.png"
@@ -27,7 +26,6 @@ const ImagesAboutUs = () => {
             />
         </div>
 
-        {/* SECOND IMAGE - top to bottom */}
         <div
             className="relative overflow-hidden
                     z-20 w-1/2 -mt-10
