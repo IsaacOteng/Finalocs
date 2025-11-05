@@ -24,7 +24,7 @@ const AboutUs = () => {
               className="z-10 w-full 
                         md:h-full md:w-[50%]
                         lg:h-58 lg:w-58
-                        xl:h-80 xl:w-82
+                        xl:h-70 xl:w-72
                         "
               src="./src/assets/man1.png"
               alt=""
@@ -34,7 +34,7 @@ const AboutUs = () => {
                         sm:w-1/2
                         md:h-full md:w-[50%] md:-mt-50 md:ml-75
                         lg:h-58 lg:w-58 lg:-mt-20 lg:ml-40
-                        xl:h-80 xl:w-77 xl:-mt-40 xl:ml-60
+                        xl:h-65 xl:w-65 xl:-mt-38 xl:ml-54
                       "
               src="./src/assets/hero_woman.png"
               alt=""
