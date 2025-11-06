@@ -4,7 +4,7 @@ import React from 'react'
 const Hero = () => {
     return (
         <>
-            <section className="w-full h-170 bg-yellow-600 flex items-start justify-center
+            <section className="w-full h-170 flex items-start justify-center
                                 sm:h-180 sm:pt-16
                                 md:h-220 md:pt-20
                                 lg:h-250 lg:pt-26

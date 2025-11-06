@@ -107,10 +107,8 @@ const Navbar = ({
         </div>
         </nav>
 
-{/* Sidebar For Phones using the three lines */}
-            {/* Mobile Menu (Styled like Fina’s Locs) */}
         
-        {/* Dim overlay: covers main content while sidebar is open. Clicking it closes the sidebar. */}
+        {/* Dim overlay for my sidebarr */}
         <div
             onClick={() => setMenuOpen(false)}
             aria-hidden={!menuOpen}
@@ -120,13 +118,13 @@ const Navbar = ({
         <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
 
-        <nav className=" bg-yellow-600 aria-hidden={false}">
+        <nav className=" bg-transparent}">
             <div className="w-full flex items-center justify-between pr-5 py-4 
                             sm:px-0 
                             md:pl-10 
                             lg:pl-10 
                             xl:pl-15">
-                {/* Logo */}
+
                 <img
                     className="w-35 h-20 my-auto ml-8 
                                 sm:w-35 sm:h-25 sm:ml-10
@@ -137,19 +135,18 @@ const Navbar = ({
                     alt="Logo"
                 />
 
-                {/* Nav Items + Button */}
                 <div className="mr-0 flex flex-row items-center 
                                 sm:mr-10 
                                 md:mr-12 
                                 lg:mr-15 
                                 xl:mr-19">
-                    {/* Desktop Nav Links */}
+                    {/* Linkd For Desktop*/}
                     <nav className="hidden xl:block xl:mr-8">
                         <ul className="flex flex-row space-x-2 font-serif text-xs 
                                         sm:space-x-4 sm:text-sm 
                                         md:space-x-6 md:text-base 
                                         lg:space-x-8 lg:text-lg 
-                                        xl:space-x-3 xl:text-sm 
+                                        xl:space-x-4 xl:text-sm 
                                         ">
                             <li className="hover:opacity-80 cursor-pointer">HOME</li>
                             <li className="hover:opacity-80 cursor-pointer">ABOUT US</li>
@@ -159,12 +156,12 @@ const Navbar = ({
 
                     {/* Book Appointment Button */}
                     <button>
-                        <span className="hidden justify-center bg-white text-black font-serif text-xs transition-all duration-700 ease-in-out cursor-pointer 
+                        <span className="hidden justify-center bg-yellow-600 text-white font-serif text-xs transition-all duration-700 ease-in-out cursor-pointer 
                             sm:px-4 sm:py-2 sm:text-sm sm:mr-10 sm:hidden 
                             md:text-base md:mr-10 md:block 
                             lg:mr-12 lg:py-3 px-13 lg:block 
                             xl:mb-0 xl:mr-0 xl:py-4 xl:px-11 xl:block 
-                            hover:text-white hover:bg-black
+                            hover:text-white hover:bg-gray-600
                             ">
                             Book Appointment
                         </span>
